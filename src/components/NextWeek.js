@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Nav from './Nav';
-import '../css/NextWeek.css';
+import '../css/App.css';
 
 class NextWeek extends Component {
   constructor(props){
@@ -12,7 +12,7 @@ class NextWeek extends Component {
 
     render() {
       return (
-        <div className="next-week-container">
+        <div className="week-container">
           <Nav/>
           <p>Next Week</p>
         </div>      

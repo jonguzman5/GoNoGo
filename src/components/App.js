@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Nav from './Nav';
-import Forecast from './Forecast'
+import Day from './Day';
 import '../css/App.css';
 
 class App extends Component {
@@ -16,28 +16,36 @@ class App extends Component {
     this.getData()
   }
 
+  days = ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun", "Mon"]
+  city = ""
+
   getData = () => {
     const LAT = '40.7831'
     const LON = '-73.9712'
     const KEY = 'XXXXXXXXXXXXXX'
     axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${LAT}&lon=${LON}&appid=${KEY}`)
       .then(res => {
-        const data = res.data;
-        console.log(data.daily);
-        this.setState({forecast: data.daily});
+        const data = res.data
+        console.log(data)
+        this.city = data.timezone
+        this.setState({forecast: data.daily})
     })
   }
 
     render() {
       return (
-        <div className="this-week-container">
+        <div className="week-container" style={{backgroundImage:`url(https://source.unsplash.com/1600x900/?${this.city})`}}>
           <Nav/>
-          <div>
+          <div className="week-header">
+            <h1>{this.city}</h1>
+          </div>
+          <div className="week-body">
             {Object.keys(this.state.forecast).map(key => (
-              <Forecast
+              <Day
                 key={key}
                 index={key}
                 forecast={this.state.forecast[key]}
+                days={this.days[key]}
               />
             ))}
           </div>

@@ -1,5 +1,44 @@
-.this-week-container {
+.week-container {
   width: 100vw;
   height: 100vh;    
-  background-color: blue;
+  display: flex;
+  flex-direction: column;
+}
+
+.week-container .week-header h1 {
+  color: white;
+  font-size: 5em;
+  text-align: center;
+  mix-blend-mode: difference;
+}
+
+.week-body {
+  display: flex;
+}
+
+.day-container {
+  width: 100vw;
+  height: 25vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10vh 0 0 0;
+}
+
+.day-container div {
+  width: 12.5vw;
+  height: 25vh;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.day-container div h1, .day-container div p {
+  color: white;
+  text-align: start;
+  mix-blend-mode: difference;
+}
+
+.day-container div h1 {
+  /* font-size: 5em; */
 }
