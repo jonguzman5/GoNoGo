@@ -16,13 +16,13 @@ class App extends Component {
     this.getData()
   }
 
-  days = ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun", "Mon"]
+  dayOfTheWeek = ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun", "Mon"]
   city = ""
 
   getData = () => {
     const LAT = '40.7831'
     const LON = '-73.9712'
-    const KEY = 'XXXXXXXXXXXXXX'
+    const KEY = process.env.REACT_APP_API_KEY
     axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${LAT}&lon=${LON}&appid=${KEY}`)
       .then(res => {
         const data = res.data
@@ -45,7 +45,7 @@ class App extends Component {
                 key={key}
                 index={key}
                 forecast={this.state.forecast[key]}
-                days={this.days[key]}
+                dayOfTheWeek={this.dayOfTheWeek[key]}
               />
             ))}
           </div>
