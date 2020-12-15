@@ -1,6 +1,6 @@
 .week-container {
   width: 100vw;
-  height: 100vh;    
+  height: 200vh;    
   display: flex;
   flex-direction: column;
 }
@@ -30,15 +30,44 @@
   width: 12.5vw;
   height: 25vh;
   border-radius: 10px;
-  background-color: white;
 }
 
 .day-container div h1, .day-container div p {
   color: white;
   text-align: start;
   mix-blend-mode: difference;
+  padding: 0 0 0 0.25vw;
 }
 
-.day-container div h1 {
-  /* font-size: 5em; */
+.day-container .dropdown {
+  margin: 1vh 0 0 0;
+}
+
+.day-container .dropdown h3 {
+  color: white;
+  text-align: start;
+  mix-blend-mode: difference;
+  padding: 0 0 0 0.5vw;
+}
+
+.day-container .dropdown form input {
+  border-radius: 10px;
+  outline: none;
+  background-color: transparent;
+  margin: 0 0 0 0.5vw;
+}
+
+.day-container .item {
+  width: 12.5vw;
+  height: 6.25vh;
+  border-radius: 10px;
+  margin: 1vh 0 0 0;
+}
+
+.day-container .item p {
+  text-align: center;
+}
+
+.dropdownOff {
+  display: none;
 }
