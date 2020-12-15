@@ -7,13 +7,13 @@ function Nav(){
     <nav className="nav-container">
         <ul>
             <li>
-                <Link to="/lastweek">Last Week</Link>
+                <Link to="/losangeles">Los Angeles</Link>
             </li>
             <li>
-                <Link to="/">This Week</Link>
+                <Link to="/">New York</Link>
             </li>
             <li>
-                <Link to="/nextweek">Next Week</Link>
+                <Link to="/chicago">Chicago</Link>
             </li>
         </ul>
     </nav>
