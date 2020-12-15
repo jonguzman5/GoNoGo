@@ -15,10 +15,14 @@ report.
 * Component Lifecycle Methods
 * Javascript Event Handling
 * Routing using React-Router
-* Project Management via **[Trello] (https://trello.com/b/IhoPMteL/gonogo)** 
+* Project Management via **[Trello](https://trello.com/b/IhoPMteL/gonogo)** 
 * GET data using OpenWeatherMap API
 * Promises/Asynchronous Methods (Async-Await)
 * Responsive styling
+
+### Wireframe
+
+![Wireframe](./wireframe.jpg)
 
 ### Technologies used
 
@@ -32,6 +36,6 @@ report.
 
 ### Link to Deployed Site
 
-* **[GoNoGo] (https://go-no-go.herokuapp.com/)** 
+* **[GoNoGo](https://go-no-go.herokuapp.com/)** 
 
 ---
